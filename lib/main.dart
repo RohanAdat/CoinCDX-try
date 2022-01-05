@@ -9,6 +9,7 @@ import 'package:coin_d_c_x/home_page/home_page_widget.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'home_page/home_page_widget.dart';
 import 'prices/prices_widget.dart';
+import 'orders/orders_widget.dart';
 import 'my_investments/my_investments_widget.dart';
 import 'account/account_widget.dart';
 
@@ -91,6 +92,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'HomePage': HomePageWidget(),
       'PRICES': PricesWidget(),
+      'ORDERS': OrdersWidget(),
       'MY_INVESTMENTS': MyInvestmentsWidget(),
       'ACCOUNT': AccountWidget(),
     };
@@ -112,6 +114,14 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24,
             ),
             label: 'PRICES',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.compare_arrows_outlined,
+              size: 24,
+            ),
+            label: 'ORDERS',
             tooltip: '',
           ),
           BottomNavigationBarItem(
