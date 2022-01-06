@@ -326,7 +326,7 @@ class _PricesWidgetState extends State<PricesWidget> {
                             color: Color(0xFFB86565),
                           ),
                           child: Text(
-                            '-0.39',
+                            '-0.39%',
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                               color: Color(0xFFC00404),
@@ -406,7 +406,7 @@ class _PricesWidgetState extends State<PricesWidget> {
                             color: Color(0xFFB86565),
                           ),
                           child: Text(
-                            '-39',
+                            '-39%',
                             style: FlutterFlowTheme.bodyText1.override(
                               fontFamily: 'Poppins',
                               color: Color(0xFFC00404),
@@ -483,7 +483,7 @@ class _PricesWidgetState extends State<PricesWidget> {
                           width: 100,
                           height: 100,
                           decoration: BoxDecoration(
-                            color: Color(0xFFEEEEEE),
+                            color: Color(0xFFC5E1A5),
                           ),
                           child: Text(
                             '+36.59',
@@ -560,7 +560,10 @@ class _PricesWidgetState extends State<PricesWidget> {
                         width: 100,
                         height: 100,
                         decoration: BoxDecoration(
-                          color: Color(0xFFEEEEEE),
+                          color: Color(0xFFC5E1A5),
+                          border: Border.all(
+                            color: Color(0xFFC5E1A5),
+                          ),
                         ),
                         child: Text(
                           '2147',
@@ -639,7 +642,7 @@ class _PricesWidgetState extends State<PricesWidget> {
                           width: 100,
                           height: 100,
                           decoration: BoxDecoration(
-                            color: Color(0xFFEEEEEE),
+                            color: Color(0xFFC5E1A5),
                           ),
                           child: Text(
                             '+78.59',

@@ -414,12 +414,23 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Text(
-                                        'Receive Now',
-                                        style:
-                                            FlutterFlowTheme.bodyText1.override(
-                                          fontFamily: 'Poppins',
-                                          color: Color(0xFF121D5C),
+                                      InkWell(
+                                        onTap: () async {
+                                          await Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ReceivecoinWidget(),
+                                            ),
+                                          );
+                                        },
+                                        child: Text(
+                                          'Receive Now',
+                                          style: FlutterFlowTheme.bodyText1
+                                              .override(
+                                            fontFamily: 'Poppins',
+                                            color: Color(0xFF121D5C),
+                                          ),
                                         ),
                                       ),
                                       Icon(
