@@ -1,6 +1,7 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../receivecoi/receivecoi_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -87,12 +88,22 @@ class _PricesWidgetState extends State<PricesWidget> {
                     ),
                     child: Align(
                       alignment: AlignmentDirectional(0, 0),
-                      child: Text(
-                        'My Wishlist',
-                        textAlign: TextAlign.center,
-                        style: FlutterFlowTheme.bodyText1.override(
-                          fontFamily: 'Poppins',
-                          fontSize: 16,
+                      child: InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ReceivecoiWidget(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'My Wishlist',
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.bodyText1.override(
+                            fontFamily: 'Poppins',
+                            fontSize: 16,
+                          ),
                         ),
                       ),
                     ),
@@ -158,17 +169,20 @@ class _PricesWidgetState extends State<PricesWidget> {
                         ),
                       ),
                     ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.3,
-                      height: MediaQuery.of(context).size.height * 0.05,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFEEEEEE),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                        child: Text(
-                          '24H change',
-                          style: FlutterFlowTheme.bodyText1,
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
+                      child: Container(
+                        width: MediaQuery.of(context).size.width * 0.3,
+                        height: MediaQuery.of(context).size.height * 0.05,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFEEEEEE),
+                        ),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(30, 0, 20, 0),
+                          child: Text(
+                            '24H change',
+                            style: FlutterFlowTheme.bodyText1,
+                          ),
                         ),
                       ),
                     ),
@@ -186,7 +200,7 @@ class _PricesWidgetState extends State<PricesWidget> {
                     decoration: BoxDecoration(
                       color: Color(0xFFEEEEEE),
                       border: Border.all(
-                        width: 2,
+                        width: 1,
                       ),
                     ),
                     child: Row(
@@ -673,8 +687,11 @@ class _PricesWidgetState extends State<PricesWidget> {
                     options: FFButtonOptions(
                       width: 130,
                       height: 40,
-                      color: FlutterFlowTheme.primaryColor,
-                      textStyle: FlutterFlowTheme.title3,
+                      color: Color(0xFF3F4A9F),
+                      textStyle: FlutterFlowTheme.title3.override(
+                        fontFamily: 'Open Sans',
+                        color: Color(0xFF030723),
+                      ),
                       borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1,
