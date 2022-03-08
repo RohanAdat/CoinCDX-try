@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "638411632125",
+    "project_id": "coindcx-ddeba",
+    "storage_bucket": "coindcx-ddeba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638411632125:android:49dcfcec280525485efd94",
+        "android_client_info": {
+          "package_name": "com.flutterflow.coindcx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638411632125-shh8dd09438arlnhim9sqmhom39i90n4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7Rd-twUwO7VgfSY5EXvSszBBnVoyiLHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638411632125-shh8dd09438arlnhim9sqmhom39i90n4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "638411632125-l8bn2s09e8dqn7d0qgos6518kkbarfra.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.coindcx"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
