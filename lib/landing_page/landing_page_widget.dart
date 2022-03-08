@@ -59,13 +59,26 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                         child: Padding(
                           padding:
                               EdgeInsetsDirectional.fromSTEB(315, 45, 0, 0),
-                          child: Text(
-                            'Skip',
-                            textAlign: TextAlign.end,
-                            style: FlutterFlowTheme.title3.override(
-                              fontFamily: 'Open Sans',
-                              color: FlutterFlowTheme.tertiaryColor,
-                              fontWeight: FontWeight.w600,
+                          child: InkWell(
+                            onTap: () async {
+                              await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      NavBarPage(initialPage: 'HomePage'),
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Skip',
+                              textAlign: TextAlign.end,
+                              style:
+                                  FlutterFlowTheme.of(context).title3.override(
+                                        fontFamily: 'Open Sans',
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiaryColor,
+                                        fontWeight: FontWeight.w600,
+                                      ),
                             ),
                           ),
                         ),
@@ -74,11 +87,12 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(20, 350, 0, 0),
                         child: Text(
                           'Easiest way to invest in Crypto',
-                          style: FlutterFlowTheme.title2.override(
-                            fontFamily: 'Poppins',
-                            color: FlutterFlowTheme.tertiaryColor,
-                            fontWeight: FontWeight.w600,
-                          ),
+                          style: FlutterFlowTheme.of(context).title2.override(
+                                fontFamily: 'Poppins',
+                                color:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                fontWeight: FontWeight.w600,
+                              ),
                         ),
                       ),
                     ],
@@ -111,11 +125,13 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                                   EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
                               child: Text(
                                 'Create your account for free!',
-                                style: FlutterFlowTheme.title3.override(
-                                  fontFamily: 'Open Sans',
-                                  color: Color(0xFF161616),
-                                  fontWeight: FontWeight.bold,
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .title3
+                                    .override(
+                                      fontFamily: 'Open Sans',
+                                      color: Color(0xFF161616),
+                                      fontWeight: FontWeight.bold,
+                                    ),
                               ),
                             ),
                           ],
@@ -137,11 +153,15 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                                 iconText: 'Sign up with Email',
                                 icon: Icon(
                                   Icons.mail_outline,
-                                  color: FlutterFlowTheme.tertiaryColor,
+                                  color: FlutterFlowTheme.of(context)
+                                      .tertiaryColor,
                                 ),
-                                buttonColor: FlutterFlowTheme.primaryColor,
-                                textColor: FlutterFlowTheme.tertiaryColor,
-                                borderColor: FlutterFlowTheme.primaryColor,
+                                buttonColor:
+                                    FlutterFlowTheme.of(context).primaryColor,
+                                textColor:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                borderColor:
+                                    FlutterFlowTheme.of(context).primaryColor,
                               ),
                             ),
                           ],
@@ -160,11 +180,13 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                             ),
                             Text(
                               'or',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
-                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                             ),
                             Container(
                               width: 100,
@@ -183,11 +205,13 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                                   EdgeInsetsDirectional.fromSTEB(60, 0, 0, 0),
                               child: Text(
                                 'Already have an account?',
-                                style: FlutterFlowTheme.title2.override(
-                                  fontFamily: 'Poppins',
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .title2
+                                    .override(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600,
+                                    ),
                               ),
                             ),
                           ],
@@ -209,11 +233,15 @@ class _LandingPageWidgetState extends State<LandingPageWidget> {
                                 iconText: 'Log in with Email',
                                 icon: Icon(
                                   Icons.mail_outlined,
-                                  color: FlutterFlowTheme.primaryColor,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryColor,
                                 ),
-                                buttonColor: FlutterFlowTheme.tertiaryColor,
-                                textColor: FlutterFlowTheme.primaryColor,
-                                borderColor: FlutterFlowTheme.primaryColor,
+                                buttonColor:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
+                                textColor:
+                                    FlutterFlowTheme.of(context).primaryColor,
+                                borderColor:
+                                    FlutterFlowTheme.of(context).primaryColor,
                               ),
                             ),
                           ],

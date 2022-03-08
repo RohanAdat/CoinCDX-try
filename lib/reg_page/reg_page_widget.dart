@@ -1,3 +1,4 @@
+import '../add_bank_details/add_bank_details_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -73,10 +74,11 @@ class _RegPageWidgetState extends State<RegPageWidget> {
                           children: [
                             Text(
                               'Create an account',
-                              style: FlutterFlowTheme.title2.override(
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.bold,
-                              ),
+                              style:
+                                  FlutterFlowTheme.of(context).title2.override(
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.bold,
+                                      ),
                             ),
                           ],
                         ),
@@ -93,11 +95,6 @@ class _RegPageWidgetState extends State<RegPageWidget> {
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   hintText: 'Full name (as per PAN)',
-                                  hintStyle:
-                                      FlutterFlowTheme.bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFFFF0505),
-                                  ),
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
@@ -123,10 +120,12 @@ class _RegPageWidgetState extends State<RegPageWidget> {
                                       EdgeInsetsDirectional.fromSTEB(
                                           20, 0, 0, 0),
                                 ),
-                                style: FlutterFlowTheme.bodyText1.override(
-                                  fontFamily: 'Poppins',
-                                  color: Color(0xFFFF0505),
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFFFF0505),
+                                    ),
                                 textAlign: TextAlign.start,
                               ),
                             ),
@@ -145,11 +144,6 @@ class _RegPageWidgetState extends State<RegPageWidget> {
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   hintText: 'Email ID',
-                                  hintStyle:
-                                      FlutterFlowTheme.bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFFFF0505),
-                                  ),
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
@@ -175,10 +169,12 @@ class _RegPageWidgetState extends State<RegPageWidget> {
                                       EdgeInsetsDirectional.fromSTEB(
                                           20, 0, 0, 0),
                                 ),
-                                style: FlutterFlowTheme.bodyText1.override(
-                                  fontFamily: 'Poppins',
-                                  color: Color(0xFFFF0505),
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFFFF0505),
+                                    ),
                                 textAlign: TextAlign.start,
                               ),
                             ),
@@ -197,11 +193,6 @@ class _RegPageWidgetState extends State<RegPageWidget> {
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   hintText: 'Create Password ',
-                                  hintStyle:
-                                      FlutterFlowTheme.bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFFFF0505),
-                                  ),
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Color(0x00000000),
@@ -227,10 +218,12 @@ class _RegPageWidgetState extends State<RegPageWidget> {
                                       EdgeInsetsDirectional.fromSTEB(
                                           20, 0, 0, 0),
                                 ),
-                                style: FlutterFlowTheme.bodyText1.override(
-                                  fontFamily: 'Poppins',
-                                  color: Color(0xFFFF0505),
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFFFF0505),
+                                    ),
                                 textAlign: TextAlign.start,
                               ),
                             ),
@@ -259,20 +252,27 @@ class _RegPageWidgetState extends State<RegPageWidget> {
                                   color: Color(0xFFEEEEEE),
                                 ),
                                 child: FFButtonWidget(
-                                  onPressed: () {
-                                    print('Button pressed ...');
+                                  onPressed: () async {
+                                    await Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            AddBankDetailsWidget(),
+                                      ),
+                                    );
                                   },
                                   text: 'Continue',
                                   options: FFButtonOptions(
                                     width: 130,
                                     height: 40,
                                     color: Color(0xFF1D255E),
-                                    textStyle:
-                                        FlutterFlowTheme.subtitle2.override(
-                                      fontFamily: 'Poppins',
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                    ),
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .subtitle2
+                                        .override(
+                                          fontFamily: 'Poppins',
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                        ),
                                     borderSide: BorderSide(
                                       color: Colors.transparent,
                                       width: 1,

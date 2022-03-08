@@ -1,6 +1,7 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../main.dart';
+import '../receivecoi/receivecoi_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,7 +25,7 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height * 1,
           decoration: BoxDecoration(
-            color: FlutterFlowTheme.tertiaryColor,
+            color: FlutterFlowTheme.of(context).tertiaryColor,
           ),
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -35,10 +36,10 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(25, 0, 0, 0),
                   child: Text(
                     'You  don\'t have any investments!',
-                    style: FlutterFlowTheme.bodyText1.override(
-                      fontFamily: 'Poppins',
-                      color: Color(0x80615F5F),
-                    ),
+                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                          fontFamily: 'Poppins',
+                          color: Color(0x80615F5F),
+                        ),
                   ),
                 ),
               ),
@@ -48,10 +49,10 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(25, 10, 0, 0),
                   child: Text(
                     'Start investing in these most\npopular coins',
-                    style: FlutterFlowTheme.title2.override(
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.normal,
-                    ),
+                    style: FlutterFlowTheme.of(context).title2.override(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.normal,
+                        ),
                   ),
                 ),
               ),
@@ -70,7 +71,7 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                             width: MediaQuery.of(context).size.width,
                             height: MediaQuery.of(context).size.height * 0.08,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.tertiaryColor,
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -98,12 +99,13 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                                       child: Text(
                                         'Bitcoin',
                                         textAlign: TextAlign.start,
-                                        style:
-                                            FlutterFlowTheme.bodyText1.override(
-                                          fontFamily: 'Poppins',
-                                          color: Color(0xFF0B0B0B),
-                                          fontSize: 16,
-                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Poppins',
+                                              color: Color(0xFF0B0B0B),
+                                              fontSize: 16,
+                                            ),
                                       ),
                                     ),
                                     Align(
@@ -111,14 +113,27 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                                       child: Text(
                                         'BTC',
                                         textAlign: TextAlign.start,
-                                        style:
-                                            FlutterFlowTheme.bodyText1.override(
-                                          fontFamily: 'Poppins',
-                                          color: Color(0x80615F5F),
-                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Poppins',
+                                              color: Color(0x80615F5F),
+                                            ),
                                       ),
                                     ),
                                   ],
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        180, 0, 0, 0),
+                                    child: Icon(
+                                      Icons.arrow_forward_ios_outlined,
+                                      color: Color(0x80615F5F),
+                                      size: 24,
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -154,10 +169,12 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                                 ),
                                 Text(
                                   'users preferred Bitcoin for their first investment',
-                                  style: FlutterFlowTheme.bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    fontSize: 10,
-                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 10,
+                                      ),
                                 ),
                               ],
                             ),
@@ -169,7 +186,7 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                             width: MediaQuery.of(context).size.width,
                             height: MediaQuery.of(context).size.height * 0.08,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.tertiaryColor,
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -197,12 +214,13 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                                       child: Text(
                                         'Ethereum',
                                         textAlign: TextAlign.start,
-                                        style:
-                                            FlutterFlowTheme.bodyText1.override(
-                                          fontFamily: 'Poppins',
-                                          color: Color(0xFF0B0B0B),
-                                          fontSize: 16,
-                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Poppins',
+                                              color: Color(0xFF0B0B0B),
+                                              fontSize: 16,
+                                            ),
                                       ),
                                     ),
                                     Align(
@@ -210,14 +228,27 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                                       child: Text(
                                         'ETH',
                                         textAlign: TextAlign.start,
-                                        style:
-                                            FlutterFlowTheme.bodyText1.override(
-                                          fontFamily: 'Poppins',
-                                          color: Color(0x80615F5F),
-                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Poppins',
+                                              color: Color(0x80615F5F),
+                                            ),
                                       ),
                                     ),
                                   ],
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        150, 0, 0, 0),
+                                    child: Icon(
+                                      Icons.arrow_forward_ios,
+                                      color: Color(0x80615F5F),
+                                      size: 24,
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -229,7 +260,7 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                             width: MediaQuery.of(context).size.width,
                             height: MediaQuery.of(context).size.height * 0.08,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.tertiaryColor,
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -257,12 +288,13 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                                       child: Text(
                                         'Ripple',
                                         textAlign: TextAlign.start,
-                                        style:
-                                            FlutterFlowTheme.bodyText1.override(
-                                          fontFamily: 'Poppins',
-                                          color: Color(0xFF0B0B0B),
-                                          fontSize: 16,
-                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Poppins',
+                                              color: Color(0xFF0B0B0B),
+                                              fontSize: 16,
+                                            ),
                                       ),
                                     ),
                                     Align(
@@ -270,14 +302,27 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                                       child: Text(
                                         'XRP',
                                         textAlign: TextAlign.start,
-                                        style:
-                                            FlutterFlowTheme.bodyText1.override(
-                                          fontFamily: 'Poppins',
-                                          color: Color(0x80615F5F),
-                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Poppins',
+                                              color: Color(0x80615F5F),
+                                            ),
                                       ),
                                     ),
                                   ],
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        180, 0, 0, 0),
+                                    child: Icon(
+                                      Icons.arrow_forward_ios,
+                                      color: Color(0x80615F5F),
+                                      size: 24,
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
@@ -289,7 +334,7 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                             width: MediaQuery.of(context).size.width,
                             height: MediaQuery.of(context).size.height * 0.08,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.tertiaryColor,
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -317,12 +362,13 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                                       child: Text(
                                         'Litecoin',
                                         textAlign: TextAlign.start,
-                                        style:
-                                            FlutterFlowTheme.bodyText1.override(
-                                          fontFamily: 'Poppins',
-                                          color: Color(0xFF0B0B0B),
-                                          fontSize: 16,
-                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Poppins',
+                                              color: Color(0xFF0B0B0B),
+                                              fontSize: 16,
+                                            ),
                                       ),
                                     ),
                                     Align(
@@ -330,21 +376,35 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                                       child: Text(
                                         'LTC',
                                         textAlign: TextAlign.start,
-                                        style:
-                                            FlutterFlowTheme.bodyText1.override(
-                                          fontFamily: 'Poppins',
-                                          color: Color(0x80615F5F),
-                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Poppins',
+                                              color: Color(0x80615F5F),
+                                            ),
                                       ),
                                     ),
                                   ],
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        165, 0, 0, 0),
+                                    child: Icon(
+                                      Icons.arrow_forward_ios,
+                                      color: Color(0x80615F5F),
+                                      size: 24,
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(25, 0, 25, 0),
+                          padding:
+                              EdgeInsetsDirectional.fromSTEB(25, 20, 25, 0),
                           child: InkWell(
                             onTap: () async {
                               await Navigator.push(
@@ -357,21 +417,35 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                             },
                             child: Container(
                               width: MediaQuery.of(context).size.width,
-                              height: MediaQuery.of(context).size.height * 0.08,
+                              height: MediaQuery.of(context).size.height * 0.06,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.tertiaryColor,
+                                color:
+                                    FlutterFlowTheme.of(context).tertiaryColor,
                                 border: Border.all(
                                   color: Color(0xFF121D5C),
                                 ),
                               ),
                               child: Align(
                                 alignment: AlignmentDirectional(0, 0),
-                                child: Text(
-                                  'See all coins',
-                                  style: FlutterFlowTheme.bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    color: Color(0xFF121D5C),
-                                    fontSize: 16,
+                                child: InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            NavBarPage(initialPage: 'PRICES'),
+                                      ),
+                                    );
+                                  },
+                                  child: Text(
+                                    'See all coins',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'Poppins',
+                                          color: Color(0xFF121D5C),
+                                          fontSize: 16,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -385,7 +459,7 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                             width: MediaQuery.of(context).size.width,
                             height: MediaQuery.of(context).size.height * 0.1,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.tertiaryColor,
+                              color: FlutterFlowTheme.of(context).tertiaryColor,
                             ),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -394,29 +468,43 @@ class _MyInvestmentsWidgetState extends State<MyInvestmentsWidget> {
                                   alignment: AlignmentDirectional(-1, 0),
                                   child: Text(
                                     'Transfer crypto from another wallet',
-                                    style: FlutterFlowTheme.bodyText1.override(
-                                      fontFamily: 'Poppins',
-                                      color: Color(0xFF0B0B0B),
-                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'Poppins',
+                                          color: Color(0xFF0B0B0B),
+                                        ),
                                   ),
                                 ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Text(
-                                      'Receive Now',
-                                      style:
-                                          FlutterFlowTheme.bodyText1.override(
-                                        fontFamily: 'Poppins',
-                                        color: Color(0xFF121D5C),
+                                InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            ReceivecoiWidget(),
                                       ),
-                                    ),
-                                    Icon(
-                                      Icons.arrow_forward,
-                                      color: Color(0xFF121D5C),
-                                      size: 24,
-                                    ),
-                                  ],
+                                    );
+                                  },
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Text(
+                                        'Receive Now',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Poppins',
+                                              color: Color(0xFF121D5C),
+                                            ),
+                                      ),
+                                      Icon(
+                                        Icons.arrow_forward,
+                                        color: Color(0xFF121D5C),
+                                        size: 24,
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),

@@ -1,6 +1,8 @@
+import '../create_price_alert/create_price_alert_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../landing_page/landing_page_widget.dart';
+import '../security/security_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -36,11 +38,11 @@ class _AccountWidgetState extends State<AccountWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(25, 0, 0, 0),
                   child: Text(
                     'Account',
-                    style: FlutterFlowTheme.title1.override(
-                      fontFamily: 'Poppins',
-                      color: Color(0xFF0B0B0B),
-                      fontWeight: FontWeight.normal,
-                    ),
+                    style: FlutterFlowTheme.of(context).title1.override(
+                          fontFamily: 'Poppins',
+                          color: Color(0xFF0B0B0B),
+                          fontWeight: FontWeight.normal,
+                        ),
                   ),
                 ),
               ),
@@ -96,11 +98,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                                           child: Text(
                                             'Sign Up or Login',
                                             textAlign: TextAlign.start,
-                                            style: FlutterFlowTheme.subtitle2
+                                            style: FlutterFlowTheme.of(context)
+                                                .subtitle2
                                                 .override(
-                                              fontFamily: 'Poppins',
-                                              color: Color(0xFF0B0B0B),
-                                            ),
+                                                  fontFamily: 'Poppins',
+                                                  color: Color(0xFF0B0B0B),
+                                                ),
                                           ),
                                         ),
                                         Align(
@@ -109,7 +112,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                           child: Text(
                                             'create an account or login',
                                             textAlign: TextAlign.start,
-                                            style: FlutterFlowTheme.bodyText1,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1,
                                           ),
                                         ),
                                       ],
@@ -126,6 +130,222 @@ class _AccountWidgetState extends State<AccountWidget> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) => LandingPageWidget(),
+                                    ),
+                                  );
+                                },
+                                child: Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: Color(0x80615F5F),
+                                  size: 24,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height * 0.08,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFEEEEEE),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(0, -0.75),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(25, 0, 0, 0),
+                                child: Container(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.1,
+                                  height:
+                                      MediaQuery.of(context).size.width * 0.1,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Image.network(
+                                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/coin-c-d-x-57a743/assets/6eh7c3gq772f/tick-shield-security-icon-black-white-tick-shield-security-icon-white-vector-illustration-isolated-117564073.jpg',
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(3, 0, 0, 0),
+                                child: InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => SecurityWidget(),
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.7,
+                                    height: MediaQuery.of(context).size.height *
+                                        0.5,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFEEEEEE),
+                                    ),
+                                    child: Align(
+                                      alignment: AlignmentDirectional(0.4, 0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Align(
+                                            alignment:
+                                                AlignmentDirectional(-1, 0),
+                                            child: Text(
+                                              'Security',
+                                              textAlign: TextAlign.start,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .subtitle2
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color:
+                                                            Color(0xFF0B0B0B),
+                                                      ),
+                                            ),
+                                          ),
+                                          Align(
+                                            alignment:
+                                                AlignmentDirectional(-1, 0),
+                                            child: Text(
+                                              'Manage password & security ',
+                                              textAlign: TextAlign.start,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(0, -0.6),
+                              child: InkWell(
+                                onTap: () async {
+                                  await Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => SecurityWidget(),
+                                    ),
+                                  );
+                                },
+                                child: Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: Color(0x80615F5F),
+                                  size: 24,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height * 0.08,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFEEEEEE),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(0, -0.75),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
+                                child: Icon(
+                                  Icons.add_alert,
+                                  color: Colors.black,
+                                  size: 30,
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(3, 0, 0, 0),
+                                child: InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            CreatePriceAlertWidget(),
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.7,
+                                    height: MediaQuery.of(context).size.height *
+                                        0.5,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFFEEEEEE),
+                                    ),
+                                    child: Align(
+                                      alignment: AlignmentDirectional(0.4, 0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Align(
+                                            alignment:
+                                                AlignmentDirectional(-1, 0),
+                                            child: Text(
+                                              'Price Alerts',
+                                              textAlign: TextAlign.start,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .subtitle2
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color:
+                                                            Color(0xFF0B0B0B),
+                                                      ),
+                                            ),
+                                          ),
+                                          Align(
+                                            alignment:
+                                                AlignmentDirectional(-1, 0),
+                                            child: Text(
+                                              'Get notification of price action',
+                                              textAlign: TextAlign.start,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(0, -0.6),
+                              child: InkWell(
+                                onTap: () async {
+                                  await Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          CreatePriceAlertWidget(),
                                     ),
                                   );
                                 },
@@ -175,24 +395,58 @@ class _AccountWidgetState extends State<AccountWidget> {
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Align(
-                                        alignment: AlignmentDirectional(-1, 0),
-                                        child: Text(
-                                          'Rate Us',
-                                          textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.subtitle2
-                                              .override(
-                                            fontFamily: 'Poppins',
-                                            color: Color(0xFF0B0B0B),
+                                      Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Text(
+                                            'Rate Us',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Poppins',
+                                                  color: Color(0xFF0B0B0B),
+                                                  fontSize: 16,
+                                                ),
                                           ),
-                                        ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    5, 0, 0, 0),
+                                            child: Icon(
+                                              Icons.star_purple500_sharp,
+                                              color: Color(0xFFF8E53E),
+                                              size: 24,
+                                            ),
+                                          ),
+                                          Icon(
+                                            Icons.star_purple500_sharp,
+                                            color: Color(0xFFF8E53E),
+                                            size: 24,
+                                          ),
+                                          Icon(
+                                            Icons.star_purple500_sharp,
+                                            color: Color(0xFFF8E53E),
+                                            size: 24,
+                                          ),
+                                          Icon(
+                                            Icons.star_purple500_sharp,
+                                            color: Color(0xFFF8E53E),
+                                            size: 24,
+                                          ),
+                                          Icon(
+                                            Icons.star_purple500_sharp,
+                                            color: Color(0xFFF8E53E),
+                                            size: 24,
+                                          ),
+                                        ],
                                       ),
                                       Align(
                                         alignment: AlignmentDirectional(-1, 0),
                                         child: Text(
                                           'Having fun? Show us some love!',
                                           textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.bodyText1,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1,
                                         ),
                                       ),
                                     ],
@@ -258,11 +512,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                                         child: Text(
                                           'Help & Support',
                                           textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.subtitle2
+                                          style: FlutterFlowTheme.of(context)
+                                              .subtitle2
                                               .override(
-                                            fontFamily: 'Poppins',
-                                            color: Color(0xFF0B0B0B),
-                                          ),
+                                                fontFamily: 'Poppins',
+                                                color: Color(0xFF0B0B0B),
+                                              ),
                                         ),
                                       ),
                                       Align(
@@ -270,7 +525,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                         child: Text(
                                           'Get heip with your account',
                                           textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.bodyText1,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1,
                                         ),
                                       ),
                                     ],
@@ -336,11 +592,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                                         child: Text(
                                           'Join Telegram Channel',
                                           textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.subtitle2
+                                          style: FlutterFlowTheme.of(context)
+                                              .subtitle2
                                               .override(
-                                            fontFamily: 'Poppins',
-                                            color: Color(0xFF0B0B0B),
-                                          ),
+                                                fontFamily: 'Poppins',
+                                                color: Color(0xFF0B0B0B),
+                                              ),
                                         ),
                                       ),
                                       Align(
@@ -348,7 +605,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                         child: Text(
                                           'Take part in discussions',
                                           textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.bodyText1,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1,
                                         ),
                                       ),
                                     ],
@@ -414,11 +672,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                                         child: Text(
                                           'Follow Us on Twitter',
                                           textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.subtitle2
+                                          style: FlutterFlowTheme.of(context)
+                                              .subtitle2
                                               .override(
-                                            fontFamily: 'Poppins',
-                                            color: Color(0xFF0B0B0B),
-                                          ),
+                                                fontFamily: 'Poppins',
+                                                color: Color(0xFF0B0B0B),
+                                              ),
                                         ),
                                       ),
                                       Align(
@@ -426,7 +685,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                         child: Text(
                                           'Stay on top of the latest update',
                                           textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.bodyText1,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1,
                                         ),
                                       ),
                                     ],
@@ -492,11 +752,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                                         child: Text(
                                           'About CoinDCX',
                                           textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.subtitle2
+                                          style: FlutterFlowTheme.of(context)
+                                              .subtitle2
                                               .override(
-                                            fontFamily: 'Poppins',
-                                            color: Color(0xFF0B0B0B),
-                                          ),
+                                                fontFamily: 'Poppins',
+                                                color: Color(0xFF0B0B0B),
+                                              ),
                                         ),
                                       ),
                                       Align(
@@ -504,7 +765,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                         child: Text(
                                           'About, Terms of Use, Privacy Policy',
                                           textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.bodyText1,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1,
                                         ),
                                       ),
                                     ],
@@ -570,11 +832,12 @@ class _AccountWidgetState extends State<AccountWidget> {
                                         child: Text(
                                           'App Feedback',
                                           textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.subtitle2
+                                          style: FlutterFlowTheme.of(context)
+                                              .subtitle2
                                               .override(
-                                            fontFamily: 'Poppins',
-                                            color: Color(0xFF0B0B0B),
-                                          ),
+                                                fontFamily: 'Poppins',
+                                                color: Color(0xFF0B0B0B),
+                                              ),
                                         ),
                                       ),
                                       Align(
@@ -582,7 +845,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                         child: Text(
                                           'Help us improve your experience',
                                           textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.bodyText1,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1,
                                         ),
                                       ),
                                     ],
@@ -605,7 +869,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
                         child: Text(
                           'App version: 2.6.006',
-                          style: FlutterFlowTheme.bodyText1,
+                          style: FlutterFlowTheme.of(context).bodyText1,
                         ),
                       ),
                     ],

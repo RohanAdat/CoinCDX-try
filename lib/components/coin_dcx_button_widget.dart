@@ -51,10 +51,10 @@ class _CoinDcxButtonWidgetState extends State<CoinDcxButtonWidget> {
             child: Text(
               widget.iconText,
               textAlign: TextAlign.start,
-              style: FlutterFlowTheme.title3.override(
-                fontFamily: 'Open Sans',
-                lineHeight: 1,
-              ),
+              style: FlutterFlowTheme.of(context).title3.override(
+                    fontFamily: 'Open Sans',
+                    lineHeight: 1,
+                  ),
             ),
           ),
         ],

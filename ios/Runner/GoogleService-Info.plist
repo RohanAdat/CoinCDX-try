@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>306431392085-rhplgrb84nbp980mj48bnqs8dkldspdt.apps.googleusercontent.com</string>
+	<string>638411632125-l8bn2s09e8dqn7d0qgos6518kkbarfra.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.306431392085-rhplgrb84nbp980mj48bnqs8dkldspdt</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>306431392085-vbnni3gti8bjnthp2tcasqul4mpnecmv.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.638411632125-l8bn2s09e8dqn7d0qgos6518kkbarfra</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCCIcOAkmDFWZ-TyUnrX2LpIHx73OF8Cs0</string>
+	<string>AIzaSyDUn4UIw3vXGRuCQ_XnxwgwMrz-_m9ve0o</string>
 	<key>GCM_SENDER_ID</key>
-	<string>306431392085</string>
+	<string>638411632125</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.flutterflow.coindcx</string>
 	<key>PROJECT_ID</key>
-	<string>coincdx-c80e6</string>
+	<string>coindcx-ddeba</string>
 	<key>STORAGE_BUCKET</key>
-	<string>coincdx-c80e6.appspot.com</string>
+	<string>coindcx-ddeba.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:306431392085:ios:106ec82ce263b5192917dc</string>
+	<string>1:638411632125:ios:68eea081b86233d75efd94</string>
 </dict>
 </plist>

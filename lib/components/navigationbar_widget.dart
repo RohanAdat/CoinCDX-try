@@ -40,31 +40,31 @@ class _NavigationbarWidgetState extends State<NavigationbarWidget> {
               child: Text(
                 'Hello ',
                 textAlign: TextAlign.start,
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Source Sans Pro',
-                  color: FlutterFlowTheme.tertiaryColor,
-                  fontSize: 16,
-                ),
+                style: FlutterFlowTheme.of(context).bodyText1.override(
+                      fontFamily: 'Source Sans Pro',
+                      color: FlutterFlowTheme.of(context).tertiaryColor,
+                      fontSize: 16,
+                    ),
               ),
             ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
               child: Text(
                 'Welcome to CoinDCX!',
-                style: FlutterFlowTheme.title1.override(
-                  fontFamily: 'Poppins',
-                  color: Color(0xFFF8F8F8),
-                ),
+                style: FlutterFlowTheme.of(context).title1.override(
+                      fontFamily: 'Poppins',
+                      color: Color(0xFFF8F8F8),
+                    ),
               ),
             ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
               child: Text(
                 'Ready To start investing in crypto? ',
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Poppins',
-                  color: Color(0xFFF8F8F8),
-                ),
+                style: FlutterFlowTheme.of(context).bodyText1.override(
+                      fontFamily: 'Poppins',
+                      color: Color(0xFFF8F8F8),
+                    ),
               ),
             ),
             Padding(
@@ -98,10 +98,10 @@ class _NavigationbarWidgetState extends State<NavigationbarWidget> {
                       child: Text(
                         'Sign up for free',
                         textAlign: TextAlign.center,
-                        style: FlutterFlowTheme.subtitle2.override(
-                          fontFamily: 'Poppins',
-                          color: Color(0xFFFAF6F6),
-                        ),
+                        style: FlutterFlowTheme.of(context).subtitle2.override(
+                              fontFamily: 'Poppins',
+                              color: Color(0xFFFAF6F6),
+                            ),
                       ),
                     ),
                   ),
@@ -113,10 +113,10 @@ class _NavigationbarWidgetState extends State<NavigationbarWidget> {
               child: Text(
                 'Benefits of Signing Up',
                 textAlign: TextAlign.start,
-                style: FlutterFlowTheme.bodyText1.override(
-                  fontFamily: 'Poppins',
-                  color: Color(0xFFF8F8F8),
-                ),
+                style: FlutterFlowTheme.of(context).bodyText1.override(
+                      fontFamily: 'Poppins',
+                      color: Color(0xFFF8F8F8),
+                    ),
               ),
             ),
           ],

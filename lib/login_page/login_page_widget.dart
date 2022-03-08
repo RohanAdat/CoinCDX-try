@@ -1,6 +1,9 @@
+import '../auth/auth_util.dart';
+import '../changepassword/changepassword_widget.dart';
 import '../components/coin_dcx_button_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../landing_page/landing_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,16 +15,16 @@ class LoginPageWidget extends StatefulWidget {
 }
 
 class _LoginPageWidgetState extends State<LoginPageWidget> {
-  TextEditingController textController1;
-  TextEditingController textController2;
+  TextEditingController emailTextController;
+  TextEditingController passwordTextController;
   bool passwordVisibility;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    textController1 = TextEditingController();
-    textController2 = TextEditingController();
+    emailTextController = TextEditingController();
+    passwordTextController = TextEditingController();
     passwordVisibility = false;
   }
 
@@ -33,7 +36,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
         preferredSize:
             Size.fromHeight(MediaQuery.of(context).size.height * 0.03),
         child: AppBar(
-          backgroundColor: FlutterFlowTheme.tertiaryColor,
+          backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
           automaticallyImplyLeading: true,
           actions: [
             Align(
@@ -43,7 +46,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                 child: Text(
                   'Help',
                   textAlign: TextAlign.center,
-                  style: FlutterFlowTheme.bodyText1,
+                  style: FlutterFlowTheme.of(context).bodyText1,
                 ),
               ),
             ),
@@ -71,10 +74,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                       child: Text(
                         'Login to your account',
-                        style: FlutterFlowTheme.title2.override(
-                          fontFamily: 'Open Sans',
-                          fontWeight: FontWeight.w600,
-                        ),
+                        style: FlutterFlowTheme.of(context).title2.override(
+                              fontFamily: 'Open Sans',
+                              fontWeight: FontWeight.w600,
+                            ),
                       ),
                     ),
                   ],
@@ -86,21 +89,22 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                         child: TextFormField(
-                          controller: textController1,
+                          controller: emailTextController,
                           obscureText: false,
                           decoration: InputDecoration(
                             hintText: 'Email address',
-                            hintStyle: FlutterFlowTheme.subtitle2,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.primaryColor,
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                                 width: 1,
                               ),
                               borderRadius: BorderRadius.circular(5),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.primaryColor,
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                                 width: 1,
                               ),
                               borderRadius: BorderRadius.circular(5),
@@ -108,7 +112,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                             contentPadding:
                                 EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
                           ),
-                          style: FlutterFlowTheme.subtitle2,
+                          style: FlutterFlowTheme.of(context).subtitle2,
                         ),
                       ),
                     ),
@@ -121,21 +125,22 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 2),
                         child: TextFormField(
-                          controller: textController2,
+                          controller: passwordTextController,
                           obscureText: !passwordVisibility,
                           decoration: InputDecoration(
                             hintText: 'Password',
-                            hintStyle: FlutterFlowTheme.subtitle2,
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.primaryColor,
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                                 width: 1,
                               ),
                               borderRadius: BorderRadius.circular(5),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.primaryColor,
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
                                 width: 1,
                               ),
                               borderRadius: BorderRadius.circular(5),
@@ -155,7 +160,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               ),
                             ),
                           ),
-                          style: FlutterFlowTheme.subtitle2,
+                          style: FlutterFlowTheme.of(context).subtitle2,
                         ),
                       ),
                     ),
@@ -169,13 +174,26 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                       children: [
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
-                          child: Text(
-                            'Forgot Password',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Open Sans',
-                              color: FlutterFlowTheme.primaryColor,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
+                          child: InkWell(
+                            onTap: () async {
+                              await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ChangepasswordWidget(),
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Forgot Password',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Open Sans',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w600,
+                                  ),
                             ),
                           ),
                         ),
@@ -194,15 +212,35 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CoinDcxButtonWidget(
-                      iconText: '    Continue',
-                      icon: Icon(
-                        Icons.add_box_sharp,
-                        color: FlutterFlowTheme.primaryColor,
+                    InkWell(
+                      onTap: () async {
+                        final user = await signInWithEmail(
+                          context,
+                          emailTextController.text,
+                          passwordTextController.text,
+                        );
+                        if (user == null) {
+                          return;
+                        }
+
+                        await Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LandingPageWidget(),
+                          ),
+                          (r) => false,
+                        );
+                      },
+                      child: CoinDcxButtonWidget(
+                        iconText: '    Continue',
+                        icon: Icon(
+                          Icons.add_box_sharp,
+                          color: FlutterFlowTheme.of(context).primaryColor,
+                        ),
+                        buttonColor: FlutterFlowTheme.of(context).primaryColor,
+                        textColor: FlutterFlowTheme.of(context).tertiaryColor,
+                        borderColor: FlutterFlowTheme.of(context).primaryColor,
                       ),
-                      buttonColor: FlutterFlowTheme.primaryColor,
-                      textColor: FlutterFlowTheme.tertiaryColor,
-                      borderColor: FlutterFlowTheme.primaryColor,
                     ),
                   ],
                 ),
